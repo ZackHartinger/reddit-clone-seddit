@@ -1,4 +1,3 @@
-import React from 'react'
 import DashboardLink from './DashboardLink'
 
 const Dashboard = () => {
