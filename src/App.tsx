@@ -12,7 +12,7 @@ function App() {
   }
   return (
     <div className='h-screen'>
-      {!showModal ?
+      {showModal ?
         <LogInDialog toggleModal={toggleShowModal} /> :
         <></>
       }

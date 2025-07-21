@@ -12,8 +12,6 @@ const Navbar = ({ toggleModal }: { toggleModal: () => void }) => {
         setSearchText('');
     }
 
-    console.log(searchText);
-
     return (
         <nav className='bg-[#0e1113] sticky top-0'>
             <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 border-b-2 border-b-[#3e4042]'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const LogInDialog = ({ toggleModal }: { toggleModal: () => void }) => {
   return (
-    <div className='fixed bg-zinc-900 h-screen w-screen z-1'>
+    <div className='bg-zinc-900 h-screen w-screen z-1'>
       <button onClick={toggleModal} className='bg-zinc-800 rounded-full p-2 float-right mt-6 mr-3'>
         <svg fill='white' height={16} width={16} viewBox="0 0 20 20">
           <path d='m11.06 10 6.22-6.22a.771.771 0 0 0-.015-1.046.771.771 0 0 0-1.045-.014L10 8.94 3.78 2.72a.771.771 0 0 0-1.042.018.771.771 0 0 0-.018 1.042L8.94 10l-6.22 6.22a.758.758 0 0 0-.02 1.08.758.758 0 0 0 1.08-.02L10 11.06l6.22 6.22a.771.771 0 0 0 1.041-.018.771.771 0 0 0 .019-1.042L11.06 10Z'></path>
