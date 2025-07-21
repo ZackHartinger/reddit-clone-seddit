@@ -1,6 +1,11 @@
 import React from 'react'
 
-const DashboardLink = ({ svgPath, linkName }: { svgPath: string, linkName: string }) => {
+interface DashboardLinkProps {
+    svgPath: string,
+    linkName: string
+}
+
+const DashboardLink: React.FC<DashboardLinkProps> = ({ svgPath, linkName }) => {
     return (
         <li className='flex items-center'>
             <a href="#" className='p-3 w-100 rounded hover:bg-zinc-800 active:bg-zinc-800'>

@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import Dashboard from '../Dashboard/Dashboard'
-const Navbar = ({ toggleModal }: { toggleModal: () => void }) => {
+
+interface NavbarProps {
+    toggleModal: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ toggleModal }) => {
     const [showDashboard, setShowDashboard] = useState<boolean>(false);
 
     const [searchText, setSearchText] = useState<string>('');

@@ -1,6 +1,10 @@
 import React from 'react'
 
-const LogInDialog = ({ toggleModal }: { toggleModal: () => void }) => {
+interface LogInModalProps {
+  toggleModal: () => void;
+}
+
+const LogInDialog: React.FC<LogInModalProps> = ({ toggleModal }) => {
   return (
     <div className='bg-zinc-900 h-screen w-screen z-1'>
       <button onClick={toggleModal} className='bg-zinc-800 rounded-full p-2 float-right mt-6 mr-3'>

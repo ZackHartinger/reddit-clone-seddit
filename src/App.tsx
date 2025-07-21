@@ -3,7 +3,7 @@ import './index.css'
 import Navbar from './components/Navbar/Navbar'
 import Post from './components/Post/Post'
 import Dashboard from './components/Dashboard/Dashboard'
-import LogInDialog from './components/LogInDialogue/LogInDialog'
+import LogInModal from './components/LogInModal/LogInModal'
 
 function App() {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='h-screen'>
       {showModal ?
-        <LogInDialog toggleModal={toggleShowModal} /> :
+        <LogInModal toggleModal={toggleShowModal} /> :
         <></>
       }
       <Navbar toggleModal={toggleShowModal} />
