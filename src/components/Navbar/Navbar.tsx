@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Dashboard from '../Dashboard/Dashboard'
 
 interface NavbarProps {
     toggleModal: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ toggleModal }) => {
+const Navbar = ({ toggleModal }: NavbarProps) => {
     const [showDashboard, setShowDashboard] = useState<boolean>(false);
 
     const [searchText, setSearchText] = useState<string>('');
@@ -68,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleModal }) => {
                 </div>
             </div>
             {showDashboard ?
-                <div className="lg:hidden absolute w-screen bg-[rgba(0,0,0,0.4)]">
+                <div className="lg:hidden absolute w-screen h-screen bg-[rgba(0,0,0,0.4)]">
                     <Dashboard />
                 </div>
                 :

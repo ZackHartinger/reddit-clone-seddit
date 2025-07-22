@@ -11,17 +11,17 @@ function App() {
     setShowModal(!showModal);
   }
   return (
-    <div className='h-screen'>
+    <div className={showModal ? 'h-screen overflow-hidden' : 'h-screen'}>
       {showModal ?
         <LogInModal toggleModal={toggleShowModal} /> :
         <></>
       }
       <Navbar toggleModal={toggleShowModal} />
-      <div className="flex">
+      <div className="flex xl:justify-center">
         <div className="hidden lg:block mt-3 ml-3">
           <Dashboard />
         </div>
-        <div className="flex-col">
+        <div className="flex-col xl:w-200">
           <Post />
           <Post></Post>
           <Post></Post>
