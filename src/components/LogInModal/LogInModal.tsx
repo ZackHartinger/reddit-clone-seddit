@@ -1,3 +1,5 @@
+import { GoogleLogin } from "@react-oauth/google";
+
 interface LogInModalProps {
   toggleModal: () => void;
 }
@@ -13,7 +15,15 @@ const LogInDialog = ({ toggleModal }: LogInModalProps) => {
         </button>
         <div className="flex flex-col relative top-4 text-white items-center gap-4">
           <h3 className='text-2xl font-bold mb-2'>Log In</h3>
-          <button className='bg-white text-zinc-900 font-bold p-2 mb-2 rounded-full cursor-pointer'>Continue with Google</button>
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              console.log(credentialResponse);
+            }}
+            onError={() => {
+              console.log("An error occured")
+            }}
+          >
+          </GoogleLogin>
           <div className="flex items-center w-90">
             <div className="grow border-t-1 border-t-zinc-400"></div>
             <span className="flex-shrink mx-4 text-white text-xs">OR</span>
