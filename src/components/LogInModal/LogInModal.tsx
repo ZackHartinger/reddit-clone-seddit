@@ -6,7 +6,8 @@ interface LogInModalProps {
 
 const LogInDialog = ({ toggleModal }: LogInModalProps) => {
   return (
-    <div onClick={toggleModal} className="absolute flex justify-center items-center h-screen w-screen text-white bg-[rgba(0,0,0,0.5)]">
+    // Overlay "dims" webpage and displays modal in the center of the screen on large screens and up, toggleModal is called on clicking the overlay to close the modal when user clicks "outside" of the modal
+    <div id="modalOverlay" onClick={toggleModal} className="absolute flex justify-center items-center h-screen w-screen text-white bg-[rgba(0,0,0,0.5)]">
       <div onClick={(e) => e.stopPropagation()} className='flex flex-col relative h-screen w-screen bg-zinc-900 z-1 lg:w-100 lg:h-200 lg:rounded'>
         <button onClick={toggleModal} className='bg-zinc-800 w-8 item-end rounded-full self-end p-2 float-right mt-6 mr-3 cursor-pointer'>
           <svg fill='white' height={16} width={16} viewBox="0 0 20 20">
